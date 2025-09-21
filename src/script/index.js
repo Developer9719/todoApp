@@ -1,3 +1,1 @@
-import { testingConnection } from "./homepage";
-
-testingConnection();
+import './todoItemLogic.js';
