@@ -1,7 +1,7 @@
 {
-  "name": "todolist",
+  "name": "todoapp",
   "version": "1.0.0",
-  "description": "*** This is a breakpoint in the lessons, this will show everything I've learned (listed below) in action and I will come back to this for help with these topics in the future ***",
+  "description": "",
   "main": "./src/script/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
