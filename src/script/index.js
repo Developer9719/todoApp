@@ -1,1 +1,1 @@
-import './todoItemLogic.js';
+import './structure.js';
