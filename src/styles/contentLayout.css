@@ -1,0 +1,17 @@
+.content {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr; /* First column is 20% of the available space, second column is 80% of the available space */
+    height: 80vh;
+}
+
+.content div h2  { /* Descendant Selector */
+    text-align: center;
+}
+
+header, footer {
+    height: 10vh;
+}
+
+footer {
+    text-align: center;
+}
