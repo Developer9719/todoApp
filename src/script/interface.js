@@ -53,7 +53,7 @@ export function createLayout() {
 }
  export function interaction() {
     // Create the form element with input to allow user to type the new project name 
-
+    
 
     // Creates the button to add projects
     classList = ['interactionButtons', 'addProjectButton'];
