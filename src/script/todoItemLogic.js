@@ -33,6 +33,7 @@ const createToDo = (title, description, dueDate, priority) => {
         description,
         dueDate,
         priority,
+        notes,
         isComplete: false,
         toggleComplete() {
             this.isComplete = !this.isComplete;
