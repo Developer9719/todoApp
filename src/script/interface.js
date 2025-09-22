@@ -1,4 +1,5 @@
 import '../styles/contentLayout.css';
+import { createToDo } from './todoItemLogic.js';
 
 // Displaying content
 export function display(parentElement = 'body', newElement = 'p', content, classes = []) {
@@ -40,6 +41,13 @@ export function createLayout() {
     classList = ['rightSide'];
     display('.content', 'div', undefined, classList);
     display('.rightSide', 'h2', 'To-Do', undefined);
+    classList = ['addToDo'];
+    display('.rightSide', 'button', 'Add To Do Task', classList);
+    const button = document.querySelector('.addToDo');
+    button.addEventListener('click', createToDo) // Runs when button is clicked
+
+    // Displays list of to-do tasks in each project
+    createToDo.displayList();   
 
     // Footer
     display('footer', 'p', '&copy 2025 To Do App', classList);

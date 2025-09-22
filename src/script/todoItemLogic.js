@@ -27,7 +27,7 @@ function Projects(title) {
  * myNewTodo.toggleComplete();
  * console.log(myNewTodo.isComplete); // true
  */
-const createToDo = (title, description, dueDate, priority) => {
+export const createToDo = (title, description, dueDate, priority) => {
     return { // This is the returned object litteral
         title,
         description,
@@ -44,6 +44,9 @@ const createToDo = (title, description, dueDate, priority) => {
             } else {
                 alert(`Can not change priority level ${currentPriorityLevel} to ${newPriorityLevel} as it's the same`);
             }
+        },
+        displayList(Projects) {
+            
         }
     };
 };

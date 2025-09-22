@@ -1,5 +1,4 @@
 import { display } from "./interface";
-import './todoItemLogic.js';
 
 /* Projects on left side bar */
 // Create a button to add a new project
