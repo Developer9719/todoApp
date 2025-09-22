@@ -16,6 +16,10 @@ h2 {
     text-decoration-line: underline;
 }
 
+.rightSide > h2 { /* Direct Child Selector */
+    margin-left: 15px;
+}
+
 .interactionButtons {
     padding: 5px;
     border-radius: 10px;
