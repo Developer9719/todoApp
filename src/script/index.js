@@ -1,5 +1,6 @@
 import './structure.js';
-import  { createLayout } from './interface.js';
+import  { createLayout, interaction } from './interface.js';
 
 // Called after structure is loaded 
 createLayout();
+interaction();

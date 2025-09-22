@@ -4,8 +4,23 @@
     height: 80vh;
 }
 
-.content div h2  { /* Descendant Selector */
+.leftSide h2  { /* Descendant Selector */
     text-align: center;
+}
+
+.leftSide {
+    background-color: aqua;
+}
+
+h2 {
+    text-decoration-line: underline;
+}
+
+.interactionButtons {
+    padding: 5px;
+    border-radius: 10px;
+    display: block;
+    margin: 5px auto 5px auto;
 }
 
 header, footer {

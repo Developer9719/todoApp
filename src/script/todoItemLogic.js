@@ -11,7 +11,7 @@ import { display } from "./interface";
  * Create a new Projects object: const projectOne = new Projects('Project Title');
  * console.log(projectOne); - Will output { title: 'Project Title' }
  */
-function Projects(title) {
+export function Projects(title) {
     this.title = title;
     this.todos = [];
 }
@@ -46,7 +46,7 @@ export const createToDo = (title, description, dueDate, priority) => {
             }
         },
         displayList(Projects) {
-            
+
         }
     };
 };
