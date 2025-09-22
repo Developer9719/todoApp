@@ -1,3 +1,4 @@
+// Displaying content
 export function display(parentElement = 'body', newElement = 'p', content = 'New content', classes = []) {
     const parent = document.querySelector(parentElement);
 
@@ -18,4 +19,9 @@ export function display(parentElement = 'body', newElement = 'p', content = 'New
 
     // Append the new element to the parent
     parent.appendChild(child);
+}
+
+// Visual design of the site
+export function createLayout() {
+    // Inspo: https://bordio.com/wp-content/themes/understrap/images/to-do-list/to-do-list-board-xl-1x.webp
 }

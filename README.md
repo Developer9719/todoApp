@@ -3,9 +3,10 @@
 
 Use this project to practice everything I learned so far:
 - CSS Grid and/or Flexbox
-- Object, Object Literals, Object Constructors
-- Factory Functions and IIFE modules
-- Classes
+- Object, Object Literals, Object Constructors: Used in this project
+- Factory Functions: Used in this project
+- IIFE
+- Classes: Used in this project
 - ES6 Modules
   - seperate script files that make use of imports and exports 
 - NPM
