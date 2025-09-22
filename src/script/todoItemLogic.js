@@ -32,12 +32,19 @@ const createToDo = (title, description, dueDate, priority) => {
         title,
         description,
         dueDate,
-        priority,
+        priority: ['low', 'medium', 'high'],
         notes,
         isComplete: false,
         toggleComplete() {
             this.isComplete = !this.isComplete;
         },
+        changePriority(currentPriorityLevel = 'low', newPriorityLevel) {
+            if (newPriorityLevel != currentPriorityLevel) {
+                priority = newPriorityLevel;
+            } else {
+                alert(`Can not change priority level ${currentPriorityLevel} to ${newPriorityLevel} as it's the same`);
+            }
+        }
     };
 };
 
