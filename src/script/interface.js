@@ -52,17 +52,20 @@ export function createLayout() {
     display('footer', 'p', '&copy 2025 To Do App', classList);
 }
  export function interaction() {
-    // Creates the buttons to add projects, to-do's for the projects
+    // Create the form element with input to allow user to type the new project name 
+
+
+    // Creates the button to add projects
     classList = ['interactionButtons', 'addProjectButton'];
     display('.leftSide', 'button', 'Add New Project', classList);
 
+    // Testing module functionality with hard coded project name
     const newProjectButton = document.querySelector('.addProjectButton');
-    let newProjectTitle = 'Testing Functionality'; // Update this to use form inputs
+    let newProjectTitle = 'Testing Functionality on the Modules'; // Update this to use form inputs
     let createTheProject = new Projects(newProjectTitle);
     newProjectButton.addEventListener('click', createTheProject);
 
     // Displays all the projects and the to-do's for the current project
     console.log(createTheProject); // Displays the project before creating it, displays on load
-
     display('.leftSide', 'p', createTheProject.title, undefined, 'testProjectId'); 
  }
