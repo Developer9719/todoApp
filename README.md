@@ -18,6 +18,7 @@ Use this project to practice everything I learned so far:
   - plugins can be used to expand functionality for things like minimizing code
   - after all this it outputs a bundle code for the browser
 - JSON 
+  - store all current projects and there to-do's in a JSON string then store that in the localStorage property to make them stay across refreshes
 
 Log terminal commands used
 - Webpack Commands
