@@ -30,6 +30,9 @@ export function display(parentElement = 'body', newElement = 'p', content, class
 
     // Append the new element to the parent
     parent.appendChild(child);
+
+    // Return the created element
+    return child;
 }
 
 // Visual design of the site
@@ -38,6 +41,7 @@ export function createLayout() {
 
     classList = ['content'];
     display('main', 'div', undefined, classList);
+
     // Left 20% of Page
     classList = ['leftSide']
     display('.content', 'div', undefined, classList);
@@ -51,30 +55,33 @@ export function createLayout() {
     // Footer
     display('footer', 'p', '&copy 2025 To Do App', classList);
 }
- export function interaction() {
-    // Create the form element with input to allow user to type the new project name 
-    display('.leftSide', 'form', undefined, 'addNewProjectForm', undefined);
-    const form = document.querySelector('form');
-    form.setAttribute('method', 'POST');
-    display('form', 'label', 'New Project Title: ', undefined, undefined);
-    const label = document.querySelector('label');
-    label.setAttribute('for', 'projectTitle');
-    display('form', 'input', undefined, undefined, undefined);
-    const input = document.querySelector('input');
-    input.setAttribute('name', 'projectTitle');
 
+export function interaction() {
+    // 1. Create the form and its elements
+    const form = display('.leftSide', 'form', undefined, 'addNewProjectForm');
 
-    // Creates the button to add projects
-    classList = ['interactionButtons', 'addProjectButton'];
-    display('.leftSide', 'button', 'Add New Project', classList);
+    display('form', 'label', 'New Project Title:', 'formLabel');
+    display('form', 'input', undefined, 'formInput').setAttribute('name', 'projectTitle');
 
-    // Testing module functionality with hard coded project name
-    const newProjectButton = document.querySelector('.addProjectButton');
-    let newProjectTitle = 'Testing Functionality on the Modules'; // Update this to use form inputs
-    let createTheProject = new Projects(newProjectTitle);
-    newProjectButton.addEventListener('click', createTheProject);
+    // 2. Creates the button to add projects
+    const projectButton = display('.leftSide', 'button', 'Add New Project', ['interactionButtons', 'addProjectButton']);
 
-    // Displays all the projects and the to-do's for the current project
-    console.log(createTheProject); // Displays the project before creating it, displays on load
-    display('.leftSide', 'p', createTheProject.title, undefined, 'testProjectId'); 
- }
+    // 3. Add a submit event listener to the form itself
+    form.addEventListener('submit', (event) => {
+        // Prevent the default form submission (full page reload)
+        event.preventDefault();
+
+        // 4. Get the value from the input field
+        const inputElement = form.querySelector('input[name="projectTitle"]');
+        const newProjectTitle = inputElement.value;
+
+        // 5. Create a new object for the project
+        const createTheProject = new Projects(newProjectTitle);
+
+        // 6. Displays the new project's title
+        display('.leftSide', 'p', createTheProject.title, [], 'testProjectId');
+
+        // Optional: Clear the input field after submission
+        inputElement.value = '';
+    })
+}
