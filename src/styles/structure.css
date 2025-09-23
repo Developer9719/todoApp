@@ -3,6 +3,25 @@
     padding: 0;
 }
 
+body {
+    padding: auto 2% auto 2%;
+}
+
+.content {
+    background-image: url('https://i.natgeofe.com/n/c9107b46-78b1-4394-988d-53927646c72b/1095.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 header > h1 { /* Direct Child selector */
+    text-align: center;
+}
+
+header, footer {
+    height: 10vh;
+}
+
+footer {
     text-align: center;
 }
