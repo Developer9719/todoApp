@@ -80,10 +80,10 @@ export function interaction() {
         const createTheProject = new Projects(newProjectTitle);
 
         // 6. Displays the new project's title
-        display('.leftSide', 'a', createTheProject.title, [], 'testProjectId').setAttribute('href', `#${createTheProject.title}`, 'id', `${createTheProject.title}`); 
+        display('.leftSide', 'a', createTheProject.title, [], 'project').setAttribute('href', `${createTheProject.title}`); 
         // Href tag uses a id. This id will clear the right side to display only the to-do's associated with the current project
         classList = ['editButton'];
-        display('.leftSide', 'a', 'Edit', classList, undefined).setAttribute('href', `edit-${createTheProject.title}`);
+        display('.leftSide', 'a', 'Edit', classList, undefined).setAttribute('href', `edit-${createTheProject.title}`   );
         classList = ['deleteButton'];
         display('.leftSide', 'a', 'Delete', classList, undefined).setAttribute('href', `delete-${createTheProject.title}`);
         display('.leftSide', 'br', undefined, undefined, undefined);
@@ -94,13 +94,13 @@ export function interaction() {
 
     /* CRUD: Update and Delete actions */
     /* Edit: */
-    // Get the id of the a tag for the selected element 
+    // Get the href value of the a tag for the selected element 
     // Replace a tag with form input element
     // On enter key press update name in object
 
 
     /* Delete: */
-    // Get the id of the a tag for the selected element 
+    // Get the href value of the a tag for the selected element 
     // Delete element object
     // Remove project from the UI    
 
