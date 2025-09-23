@@ -80,8 +80,12 @@ export function interaction() {
         const createTheProject = new Projects(newProjectTitle);
 
         // 6. Displays the new project's title
-        display('.leftSide', 'a', createTheProject.title, [], 'testProjectId').setAttribute('href', `#${createTheProject.title}`, 'id', `${createTheProject.title}`); // Href tag uses a id. This id
-        // will clear the right side to display only the to-do's associated with the current project
+        display('.leftSide', 'a', createTheProject.title, [], 'testProjectId').setAttribute('href', `#${createTheProject.title}`, 'id', `${createTheProject.title}`); 
+        // Href tag uses a id. This id will clear the right side to display only the to-do's associated with the current project
+        classList = ['editButton'];
+        display('.leftSide', 'a', 'Edit', classList, undefined).setAttribute('href', `edit-${createTheProject.title}`);
+        classList = ['deleteButton'];
+        display('.leftSide', 'a', 'Delete', classList, undefined).setAttribute('href', `delete-${createTheProject.title}`);
         display('.leftSide', 'br', undefined, undefined, undefined);
 
         // Optional: Clear the input field after submission

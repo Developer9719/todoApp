@@ -31,3 +31,7 @@ h2 {
     display: block;
     margin: 5px auto 5px auto;
 }
+
+.editButton, .deleteButton {
+    margin-left: 5px;
+}
