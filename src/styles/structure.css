@@ -28,4 +28,5 @@ header, footer {
 
 footer {
     text-align: center;
+    padding: calc(10vh*0.4);
 }
