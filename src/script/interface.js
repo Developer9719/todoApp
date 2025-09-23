@@ -53,6 +53,15 @@ export function createLayout() {
 }
  export function interaction() {
     // Create the form element with input to allow user to type the new project name 
+    display('.leftSide', 'form', undefined, 'addNewProjectForm', undefined);
+    const form = document.querySelector('form');
+    form.setAttribute('method', 'POST');
+    display('form', 'label', 'New Project Title: ', undefined, undefined);
+    const label = document.querySelector('label');
+    label.setAttribute('for', 'projectTitle');
+    display('form', 'input', undefined, undefined, undefined);
+    const input = document.querySelector('input');
+    input.setAttribute('name', 'projectTitle');
 
 
     // Creates the button to add projects
