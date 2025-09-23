@@ -2,10 +2,10 @@
 *** This is a breakpoint in the lessons, this will show everything I've learned (listed below) in action and I will come back to this for help with these topics in the future ***
 
 Use this project to practice everything I learned so far:
-- CSS Grid and/or Flexbox
+- CSS Grid and/or Flexbox: Used in this project
 - Object, Object Literals, Object Constructors: Used in this project
 - Factory Functions: Used in this project
-- IIFE
+- IIFE: Use for the localStorage JS function to retrieve projects and to-do's on website load
 - Classes: Used in this project
 - ES6 Modules
   - seperate script files that make use of imports and exports 
