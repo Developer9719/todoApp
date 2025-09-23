@@ -18,7 +18,6 @@ Use this project to practice everything I learned so far:
   - plugins can be used to expand functionality for things like minimizing code
   - after all this it outputs a bundle code for the browser
 - JSON 
-- OOP Principles 
 
 Log terminal commands used
 - Webpack Commands
