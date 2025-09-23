@@ -83,12 +83,12 @@ export function interaction() {
         display('.leftSide', 'a', createTheProject.title, [], 'project').setAttribute('href', `${createTheProject.title}`); 
         // Href tag uses a id. This id will clear the right side to display only the to-do's associated with the current project
         classList = ['editButton'];
-        display('.leftSide', 'a', 'Edit', classList, undefined).setAttribute('href', `edit-${createTheProject.title}`   );
+        display('.leftSide', 'a', 'Edit', classList, undefined);
         classList = ['deleteButton'];
         display('.leftSide', 'a', 'Delete', classList, undefined).setAttribute('href', `delete-${createTheProject.title}`);
         display('.leftSide', 'br', undefined, undefined, undefined);
 
-        // Optional: Clear the input field after submission
+        // Clear the input field after submission
         inputElement.value = '';
     });
 

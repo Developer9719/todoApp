@@ -16,6 +16,11 @@ export function Projects(title) {
     this.todos = [];
 }
 
+// Grab all Projects object to store in a JSON string inside a localStorage JS string
+
+
+
+
 // Creating to do items: Factory Function
 /**
  * Creates and returns a new object that does not require using the new keyword
