@@ -4,44 +4,22 @@ import { createToDo, Projects } from './todoItemLogic.js';
 let classList = [];
 
 // Displaying content
-export function display(htmlElementNeeded = 'div', parentElement = 'body', newElement = 'p', content, classes = [], ids) {
+export function display(htmlElementNeeded = 'div', nested = false, parentElement) {
     // Rework this function to optimize usage
     /**
      * Right now I call this function 10 times or more in 15 lines of code 
      * Rework it so i can call it once to have it generate everything at once
-     * - Call once to generate a form with an input and a button instead of calling once for each element  
+     * - IE: Call once to generate a form with an input and a button instead of calling once for each element  
      */
 
-
-
-    /*const parent = document.querySelector(parentElement);
-
-    if (!parent) {
-        console.error(`Parent element '${parentElement}' not found.`);
-        return; // Exit the function if the parent isn't found
+    // Validation Rules
+    let validationPassResult = false;
+    if (nested == true && parentElement != undefined || nested == true && parentElement == '') {
+        validationPassResult = true;
     }
 
-    const child = document.createElement(newElement);
-    if (content != undefined) {
-        child.textContent = content;
-    }    
+    // Basic Element Structure
 
-    // Add classes using forEach and the classList property
-    if (Array.isArray(classes) && classes.length > 0) {
-        classes.forEach(className => {
-            child.classList.add(className);
-        });
-    }
-
-    if (ids != undefined) {
-        child.id = ids;
-    }
-
-    // Append the new element to the parent
-    parent.appendChild(child);
-
-    // Return the created element
-    return child;*/
 }
 
 // Visual design of the site
@@ -114,4 +92,13 @@ export function interaction() {
     // Remove project from the UI    
 
     // ? Refactor this to work for adding projects and there tasks ? */
+}
+
+function BasicElementLayout() {
+    // Build method
+    
+
+    // Element Blueprints 
+
+
 }
