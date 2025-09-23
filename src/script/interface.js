@@ -4,8 +4,17 @@ import { createToDo, Projects } from './todoItemLogic.js';
 let classList = [];
 
 // Displaying content
-export function display(parentElement = 'body', newElement = 'p', content, classes = [], ids) {
-    const parent = document.querySelector(parentElement);
+export function display(htmlElementNeeded = 'div', parentElement = 'body', newElement = 'p', content, classes = [], ids) {
+    // Rework this function to optimize usage
+    /**
+     * Right now I call this function 10 times or more in 15 lines of code 
+     * Rework it so i can call it once to have it generate everything at once
+     * - Call once to generate a form with an input and a button instead of calling once for each element  
+     */
+
+
+
+    /*const parent = document.querySelector(parentElement);
 
     if (!parent) {
         console.error(`Parent element '${parentElement}' not found.`);
@@ -32,12 +41,12 @@ export function display(parentElement = 'body', newElement = 'p', content, class
     parent.appendChild(child);
 
     // Return the created element
-    return child;
+    return child;*/
 }
 
 // Visual design of the site
 export function createLayout() {
-    // Inspo: https://bordio.com/wp-content/themes/understrap/images/to-do-list/to-do-list-board-xl-1x.webp
+/*    // Inspo: https://bordio.com/wp-content/themes/understrap/images/to-do-list/to-do-list-board-xl-1x.webp
 
     classList = ['content'];
     display('main', 'div', undefined, classList);
@@ -53,11 +62,11 @@ export function createLayout() {
     display('.rightSide', 'h2', 'To-Do', undefined);
 
     // Footer
-    display('footer', 'p', '&copy 2025 To Do App', classList);
+    display('footer', 'p', '&copy 2025 To Do App', classList);*/
 }
-
+    
 export function interaction() {
-    /* CRUD: Create and Read actions */
+/*    // CRUD: Create and Read actions
     // 1. Create the form and its elements
     const form = display('.leftSide', 'form', undefined, 'addNewProjectForm');
 
@@ -104,5 +113,5 @@ export function interaction() {
     // Delete element object
     // Remove project from the UI    
 
-    // ? Refactor this to work for adding projects and there tasks ?
+    // ? Refactor this to work for adding projects and there tasks ? */
 }
