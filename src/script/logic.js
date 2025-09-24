@@ -1,5 +1,11 @@
 import { display } from "./interface";
 
+// Basic Element Structure
+/**
+ * Store all needed HTML element structures in an object to allow for less display function calls
+ */
+
+
 // Object constructors vs factory functions is simply a matter of preference.
 
 // Projects: Object Constructors

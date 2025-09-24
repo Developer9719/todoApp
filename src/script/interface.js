@@ -1,5 +1,5 @@
 import '../styles/contentLayout.css';
-import { createToDo, Projects } from './todoItemLogic.js';
+import { createToDo, Projects } from './logic.js';
 
 let classList = [];
 
@@ -94,11 +94,3 @@ export function interaction() {
     // ? Refactor this to work for adding projects and there tasks ? */
 }
 
-function BasicElementLayout() {
-    // Build method
-    
-
-    // Element Blueprints 
-
-
-}
