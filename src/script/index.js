@@ -7,5 +7,6 @@ htmlStructure(); // Setups up the basic structure
 createLayout(); // Create the customized layout
 interaction(); // Add user interaction 
 
-const createDiv = basicElementStructures.div('Testing Class. Class working for div at least'); // Dynamically creates element blueprint
+// Testing 
+const createDiv = basicElementStructures.div('Testing Class'); // Dynamically creates element blueprint
 new basicElementStructures(createDiv, 'main'); // Creates the new element
