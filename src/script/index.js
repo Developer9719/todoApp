@@ -3,3 +3,4 @@ import  { basicHTML, customizedLayout } from './structure.js';
 
 // Create the basic and customized page layout
 basicHTML();
+customizedLayout();

@@ -1,4 +1,5 @@
 import '../styles/structure.css';
+import '../styles/contentLayout.css';
 
 // Basic Element Structure
 /**
@@ -102,6 +103,23 @@ export class basicElementStructures {
             ]
         }
     }
+
+    static twoColumnLayout(classParent, classChildren) {
+        return {
+            tag: 'div',
+            classes: classParent,
+            children: [
+                {
+                    tag: 'div',
+                    classes: classChildren
+                },
+                {
+                    tag: 'div',
+                    classes: classChildren    
+                }
+            ]
+        }
+    }
 }
 
 export function basicHTML() {
@@ -110,5 +128,6 @@ export function basicHTML() {
 }
 
 export function customizedLayout() {
-    
+    const twoColumns = basicElementStructures.twoColumnLayout(['gridParent'], ['girdChild']);
+    new basicElementStructures(twoColumns, 'body');
 }
