@@ -1,4 +1,5 @@
 import '../styles/structure.css';
+import { display } from './interface';
 
 export function htmlStructure() {
     // Customize HTML template for current project
