@@ -104,30 +104,77 @@ export class basicElementStructures {
         }
     }
 
-    static twoColumnLayout(classParent, classChildren) {
+    static twoColumnLayout(classParent, classChildren, colOneTitle, colTwoTitle, colOneContent, colTwoContent) {
         return {
             tag: 'div',
             classes: classParent,
             children: [
                 {
                     tag: 'div',
-                    classes: classChildren
+                    classes: [classChildren, 'colOne'],
+                    children: [
+                        {
+                            tag: 'h2',
+                            content: colOneTitle
+                        },
+                        {
+                            tag: 'p',
+                            conent: colOneContent
+                        }
+                    ]
                 },
                 {
                     tag: 'div',
-                    classes: classChildren    
+                    classes: [classChildren, 'colTwo'],
+                    children: [
+                        {
+                            tag: 'h2',
+                            content: colTwoTitle
+                        },
+                        {
+                            tag: 'p',
+                            content: colTwoContent
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+
+    static footer(content) {
+        return {
+            tag: 'footer',
+            children: [
+                {
+                    tag: 'p',
+                    content: content
                 }
             ]
         }
     }
 }
 
-export function basicHTML() {
+export function customizedHTML() {
+    let content = '';
+    
+    /* Basic Header */ 
     const header = basicElementStructures.siteHeader('To-Do List App');
     new basicElementStructures(header, 'body');
-}
 
-export function customizedLayout() {
-    const twoColumns = basicElementStructures.twoColumnLayout(['gridParent'], ['girdChild']);
+    /* Customized Content */
+    const colOneTitle = 'Project Listing';
+    const colTwoTitle = 'Project Tasks';
+    let colOneContent;
+    let colTwoContent; // 3 column layout
+    // Create 2 column layout
+    const twoColumns = basicElementStructures.twoColumnLayout(['gridParent'], ['gridChild'], colOneTitle, colTwoTitle, colOneContent, /*colTwoContent*/);
     new basicElementStructures(twoColumns, 'body');
+    // Create form to put in 1 column made above
+    colOneContent = basicElementStructures.form('New Project Name: ', 'Submit Project');
+    new basicElementStructures(colOneContent, '.colOne');
+
+    /* Basic Footer */
+    content = '&copy 2025 - To-Do App Project';
+    const footer = basicElementStructures.footer(content);
+    new basicElementStructures(footer, 'body');
 }

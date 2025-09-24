@@ -1,9 +1,18 @@
+/* These are styles for basic HTML elements that will be the same across all sites. Styles for boilerplate HTML skeleton */
+
 * { /* Universal Selector: Reset */
     margin: 0;
     padding: 0;
 }
 
-header h1 {
-    text-align: center;
+body {
+    height: 100vh;
+}
 
+header h1, footer {
+    text-align: center;
+}
+
+header footer {
+    height: 10%;
 }

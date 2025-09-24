@@ -1,0 +1,30 @@
+/* These are styles for customized layouts of the page */
+
+.gridParent {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 90%;
+    background-image: url('https://i.natgeofe.com/n/c9107b46-78b1-4394-988d-53927646c72b/1095.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.gridChild {
+    /* top, right, bottom, left */
+    /* auto is not valid for padding */
+    padding: 20px 0 0 10px;
+}
+
+.gridChild h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.colOne {
+    background-color: aqua;
+}
+
+.colTwo {
+    background-color: rgba(255, 255, 255, 0.3);
+}
