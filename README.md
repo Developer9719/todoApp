@@ -45,10 +45,12 @@
 ## Object Constructors
 Creates multiple objects with the same properties and methods
 Create an object constructor with a regular function and a capital letter on the name 
+  ```js
   export function Projects(title) {
       this.title = title;
       this.todos = [];
   }
+  ```
 Use the 'this' keyword to assign properties and methods to the new object that will be created
 
 Create a new Projects object: const projectOne = new Projects('Project Title');
@@ -56,6 +58,7 @@ console.log(projectOne); - Will output { title: 'Project Title' }
 
 ## Factory Functions
 Creates and returns a new object that does not require using the 'new' keyword
+  ```js
   export const createToDo = (title, description, dueDate, priority) => {
       return { // This is the returned object litteral
           title,
@@ -68,7 +71,7 @@ Creates and returns a new object that does not require using the 'new' keyword
               this.isComplete = !this.isComplete;
           }
       };
-  };
+  };```
 Create new todo: const myNewTodo = createToDo('Finish Homework', 'Complete math problems', '2025-09-22', 'high');
 
 console.log(myNewTodo.title); // "Finish Homework"
@@ -78,6 +81,7 @@ myNewTodo.toggleComplete();
 console.log(myNewTodo.isComplete); // true
 
 ## Classes
+```js
 class AppManager { // PascalCase: This is the convention for class names
     constructor() { // Automatically called when using the new keyword to create a new object of the class
         this.projects = [];
@@ -90,7 +94,7 @@ class AppManager { // PascalCase: This is the convention for class names
     getProjects() {
         return this.projects;
     }
-}
+}```
 Create a new instance of the AppManager
 const myApp = new appManager();
 
