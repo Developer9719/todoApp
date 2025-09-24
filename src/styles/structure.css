@@ -3,30 +3,7 @@
     padding: 0;
 }
 
-body {
-    padding: auto 2% auto 2%;
-}
-
-h1 {
-    padding: calc(10vh*0.25) ;
-}
-
-.content {
-    background-image: url('https://i.natgeofe.com/n/c9107b46-78b1-4394-988d-53927646c72b/1095.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-header > h1 { /* Direct Child selector */
+header h1 {
     text-align: center;
-}
 
-header, footer {
-    height: 10vh;
-}
-
-footer {
-    text-align: center;
-    padding: calc(10vh*0.4);
 }

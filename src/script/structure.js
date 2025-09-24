@@ -1,3 +1,5 @@
+import '../styles/structure.css';
+
 // Basic Element Structure
 /**
  * Store all needed HTML element structures in an object to allow for less display function calls
@@ -15,45 +17,51 @@ export class basicElementStructures {
     }
 
     build(blueprint, parentElement) {
-        // Validation Rules 
-        const parent = document.querySelector(parentElement);
-        if (!parent) { // If parent is undefined 
-            console.log('Parent element not found.');
-        } else if (!blueprint) { // If blueprint is not found
-            console.log('Blueprint not found');
+        // Check if the parentElement is a string selector or an actual element object.
+        const parent = typeof parentElement === 'string' 
+                    ? document.querySelector(parentElement) 
+                    : parentElement;
+
+        // Validation Rules
+        if (!parent) {
+            console.error('Parent element not found.');
+            return;
+        } else if (!blueprint) {
+            console.error('Blueprint not found.');
+            return;
         }
 
         // Create the element
         const element = document.createElement(blueprint.tag);
 
-        // Apply classes, id's and attributes to the new element
-        if (blueprint.id) { // If blueprint object has id property
+        // Apply properties like classes, ID, attributes, and content.
+        if (blueprint.id) {
             element.id = blueprint.id;
         }
         
-        if (blueprint.classes) { // If blueprint object has a class property
+        if (blueprint.classes) {
             blueprint.classes.forEach(className => {
                 element.classList.add(className);
             });
         }
 
-        if (blueprint.attributes) { // If blueprint object has an attribute property
+        if (blueprint.attributes) {
             for (const attribute in blueprint.attributes) {
                 element.setAttribute(attribute, blueprint.attributes[attribute]);
             }
         }
 
-        if (blueprint.content) { // If blueprint object has a content property
+        if (blueprint.content) {
             element.textContent = blueprint.content;
         }
 
-        if (blueprint.children && Array.isArray(blueprint.children)) { // Checks if blueprint object has a children property and if its an array
-            blueprint.children.forEach(childBlueprint => { // Loop over each child blueprint in the array
-                this.build(childBlueprint, element); // Calls the build method again on each child lopping until all nested children have been build
+        if (blueprint.children && Array.isArray(blueprint.children)) {
+            blueprint.children.forEach(childBlueprint => {
+                this.build(childBlueprint, element);
             });
         }
 
-        parent.appendChild(element); // Adds the new element to the DOM under the parent element
+        parent.appendChild(element);
     }
 
     // Element Blueprints
@@ -82,10 +90,23 @@ export class basicElementStructures {
             ]
         }
     }
+
+    static siteHeader(title) {
+        return {
+            tag: 'header',
+            children: [
+                {
+                    tag: 'h1',
+                    content: title
+                }
+            ]
+        }
+    }
 }
 
 export function basicHTML() {
-
+    const header = basicElementStructures.siteHeader('To-Do List App');
+    new basicElementStructures(header, 'body');
 }
 
 export function customizedLayout() {
