@@ -26,7 +26,7 @@ export function htmlStructure() {
  * Store all needed HTML element structures in an object to allow for less display function calls
  */
 
-class basicElementStructures {
+export class basicElementStructures {
     constructor(blueprint, parentElement) { // Called when a new object of this class is created
         // Validation Rules
         if (!blueprint || !parentElement) { // Are the blueprint and parentElement varables empty
@@ -80,11 +80,29 @@ class basicElementStructures {
     }
 
     // Element Blueprints
-    static div() {
-
+    static div(content) {
+        return {
+            tag: 'div',
+            content: content
+        }
     }
 
-    static form () {
-
+    static form (label, buttonName) {
+        return {
+            tag: 'form',
+            children: [
+                {
+                    tag: 'label',
+                    content: label
+                },
+                {
+                    tag: 'input'
+                },
+                {
+                    tag: 'button',
+                    content: buttonName
+                }
+            ]
+        }
     }
 }
