@@ -1,27 +1,27 @@
 # todoList
 *** This is a breakpoint in the lessons, this will show everything I've learned (listed below) in action and I will come back to this for help with these topics in the future ***
 
-#Use this project to practice everything I learned so far:
-##CSS Grid and/or Flexbox: Used in this project
-##Object, Object Literals, Object Constructors: Used in this project
-##Factory Functions: Used in this project
-##IIFE: Use for the localStorage JS function to retrieve projects and to-do's on website load
-##Classes: Used in this project
-##ES6 Modules
+# Use this project to practice everything I learned so far:
+## CSS Grid and/or Flexbox: Used in this project
+## Object, Object Literals, Object Constructors: Used in this project
+## Factory Functions: Used in this project
+## IIFE: Use for the localStorage JS function to retrieve projects and to-do's on website load
+## Classes: Used in this project
+## ES6 Modules
   - seperate script files that make use of imports and exports 
-##NPM
+## NPM
   - to install packages for use in the project
-##Webpack
+## Webpack
   - bundles project code and dependancies and assets like CSS and images into smaller, optimized bundles for the browser to read
   - starts with the defined entry point to create a dependancy graph by tracing imports for modules (seperate script files) and assets in the project
   - loaders are used to process non JS code 
   - plugins can be used to expand functionality for things like minimizing code
   - after all this it outputs a bundle code for the browser
-##JSON 
+## JSON 
   - store all current projects and there to-do's in a JSON string then store that in the localStorage property to make them stay across refreshes
 
-#Log terminal commands used
-##Webpack Commands
+# Log terminal commands used
+## Webpack Commands
   
   - npm init -y: Creates a package.json which stores all dependancies of the project, defines scripts to automatically run tasks at certain points amount other jobs
     - main property is the entry point for a package or module, and is loaded first when the package is used 
@@ -41,4 +41,4 @@
   - npx webpack serve --config webpack.dev.js: Starts the live server with the live reload. This one is need as opposed to npx webpack serve because there is no webpack.config.js file and it is instead split into 3 files
     - You wont see the dist folder or files within it during development as it creates those in memory, they only appear after production or running npm run build
 
-#Other Information  
+# Other Information  
