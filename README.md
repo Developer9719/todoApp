@@ -71,7 +71,8 @@ Creates and returns a new object that does not require using the 'new' keyword
               this.isComplete = !this.isComplete;
           }
       };
-  };```
+  };
+  ```
 Create new todo: const myNewTodo = createToDo('Finish Homework', 'Complete math problems', '2025-09-22', 'high');
 
 console.log(myNewTodo.title); // "Finish Homework"
@@ -94,7 +95,8 @@ class AppManager { // PascalCase: This is the convention for class names
     getProjects() {
         return this.projects;
     }
-}```
+}
+```
 Create a new instance of the AppManager
 const myApp = new appManager();
 
