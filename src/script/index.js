@@ -1,12 +1,4 @@
-import './pageLoad.js'; // Runs the IIFE
-import { htmlStructure } from './structure.js'; 
-import  { createLayout, interaction } from './interface.js';
-import { basicElementStructures } from './structure.js';
+import './pageLoad.js' // Runs the IIFE to check for save projects and there to-do's in a JSON string in localStorage
+import  { basicHTML, customizedLayout } from './structure.js';
 
-htmlStructure(); // Setups up the basic structure
-createLayout(); // Create the customized layout
-interaction(); // Add user interaction 
-
-// Testing 
-const createDiv = basicElementStructures.div('Testing Class'); // Dynamically creates element blueprint
-new basicElementStructures(createDiv, 'main'); // Creates the new element
+// Create the basic and customized page layout
