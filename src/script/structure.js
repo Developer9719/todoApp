@@ -1,5 +1,6 @@
 import '../styles/structure.css';
 import '../styles/contentLayout.css';
+import { projectListCRUD, taskListCRUD } from './userInteraction';
 
 // Basic Element Structure
 /**
@@ -169,9 +170,12 @@ export function customizedHTML() {
     // Create 2 column layout
     const twoColumns = basicElementStructures.twoColumnLayout(['gridParent'], ['gridChild'], colOneTitle, colTwoTitle, colOneContent, /*colTwoContent*/);
     new basicElementStructures(twoColumns, 'body');
-    // Create form to put in 1 column made above
+    // Create form to put in first column made above
     colOneContent = basicElementStructures.form('New Project Name: ', 'Submit Project');
     new basicElementStructures(colOneContent, '.colOne');
+    // Calls project and task user interaction script to run 
+    projectListCRUD();
+    taskListCRUD();
 
     /* Basic Footer */
     content = '&copy 2025 - To-Do App Project';
