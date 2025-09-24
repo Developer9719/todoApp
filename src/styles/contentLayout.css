@@ -4,11 +4,6 @@
     height: 80vh;
 }
 
-h2  { /* Descendant Selector */
-    text-align: center;
-    margin: 15px;
-}
-
 .leftSide {
     background-color: aqua;
 }
@@ -17,19 +12,21 @@ h2  { /* Descendant Selector */
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-h2 {
-    text-decoration-line: underline;
-}
-
-.rightSide > h2 { /* Direct Child Selector */
-    margin-left: 15px;
-}
-
 .interactionButtons {
     padding: 5px;
     border-radius: 10px;
     display: block;
     margin: 5px auto 5px auto;
+}
+
+h2  { /* Descendant Selector */
+    text-align: center;
+    margin: 15px;
+    text-decoration-line: underline;
+}
+
+.rightSide > h2 { /* Direct Child Selector */
+    margin-left: 15px;
 }
 
 .editButton, .deleteButton {
