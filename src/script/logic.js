@@ -1,5 +1,3 @@
-import { display } from "./interface";
-
 // Object Constructors
 export function Projects(title) {
     this.title = title;

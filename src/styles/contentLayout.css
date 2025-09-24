@@ -1,34 +1,30 @@
-.content {
+/* These are styles for customized layouts of the page */
+
+.gridParent {
     display: grid;
-    grid-template-columns: 0.2fr 0.8fr; /* First column is 20% of the available space, second column is 80% of the available space */
-    height: 80vh;
+    grid-template-columns: 1fr 4fr;
+    height: 90%;
+    background-image: url('https://i.natgeofe.com/n/c9107b46-78b1-4394-988d-53927646c72b/1095.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.leftSide {
+.gridChild {
+    /* top, right, bottom, left */
+    /* auto is not valid for padding */
+    padding: 20px 0 0 10px;
+}
+
+.gridChild h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.colOne {
     background-color: aqua;
 }
 
-.rightSide {
+.colTwo {
     background-color: rgba(255, 255, 255, 0.3);
-}
-
-.interactionButtons {
-    padding: 5px;
-    border-radius: 10px;
-    display: block;
-    margin: 5px auto 5px auto;
-}
-
-h2  { /* Descendant Selector */
-    text-align: center;
-    margin: 15px;
-    text-decoration-line: underline;
-}
-
-.rightSide > h2 { /* Direct Child Selector */
-    margin-left: 15px;
-}
-
-.editButton, .deleteButton {
-    margin-left: 5px;
 }
