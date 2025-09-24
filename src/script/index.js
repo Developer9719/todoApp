@@ -1,7 +1,11 @@
 import './pageLoad.js'; // Runs the IIFE
-import './structure.js'; // Setups up the basic structure
+import { htmlStructure } from './structure.js'; 
 import  { createLayout, interaction } from './interface.js';
+import { basicElementStructures } from './structure.js';
 
-// Called after structure is loaded 
+htmlStructure(); // Setups up the basic structure
 createLayout(); // Create the customized layout
 interaction(); // Add user interaction 
+
+const createDiv = basicElementStructures.div('Testing Class. Class working for div at least'); // Dynamically creates element blueprint
+new basicElementStructures(createDiv, 'main'); // Creates the new element
