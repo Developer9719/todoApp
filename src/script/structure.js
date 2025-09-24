@@ -1,4 +1,3 @@
-import { display } from './interface.js';
 import '../styles/structure.css';
 
 export function htmlStructure() {
