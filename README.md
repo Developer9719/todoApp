@@ -105,3 +105,15 @@ myApp.addProject({ title: 'Work Tasks' });
 
 Call the getProjects method to see the data
 console.log(myApp.getProjects()); // Output: [{ title: 'Work Tasks' }]
+
+Static Factory Method is a function within a class that returns an instance of the class
+```js
+class MyClass {
+  static div() {
+    return {
+
+    }
+  }
+}
+```
+MyClass.div() - Calling the static factory method

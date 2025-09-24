@@ -25,3 +25,22 @@ export function htmlStructure() {
 /**
  * Store all needed HTML element structures in an object to allow for less display function calls
  */
+
+class basicElementStructures {
+    constructor(blueprint, parentElement) {
+
+    }
+
+    build() {
+        
+    }
+
+    // Element Blueprints
+    div() {
+
+    }
+
+    form () {
+
+    }
+}
