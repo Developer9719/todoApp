@@ -28,11 +28,6 @@ export function Projects(title) {
     saveProjects();
 }
 
-// Grab all Projects object to store in a JSON string inside a localStorage JS string
-
-
-
-
 // Factory Function
 export const createToDo = (title, description, dueDate, priority) => {
     return { // This is the returned object litteral

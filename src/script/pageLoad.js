@@ -14,6 +14,8 @@ import { basicElementStructures, customizedHTML } from "./structure.js";
     
     // Check if the container exists before trying to add elements.
     if (projectsContainer) {
+        // For Testing Purposes to clear the array
+        //currentProjects.length = 0;
         // 4. Iterate over the loaded projects and render them into the container.
         currentProjects.forEach(project => {
             const projectBlueprint = basicElementStructures.div(project.title);
@@ -22,4 +24,7 @@ import { basicElementStructures, customizedHTML } from "./structure.js";
             new basicElementStructures(projectBlueprint, projectsContainer);
         });
     }
+
+    
 })();
+

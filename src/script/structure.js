@@ -196,6 +196,7 @@ export function customizedHTML() {
     );
     new basicElementStructures(twoColumns, 'body');
 
+
     // Calls project and task user interaction script to run
     projectListCRUD();
     taskListCRUD();
