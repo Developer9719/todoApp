@@ -116,7 +116,26 @@ export class basicElementStructures {
         }
     }
 
-    static twoColumnLayout(classParent, classChildren, colOneTitle, colTwoTitle, colOneContent, colTwoContent) {
+    static twoColumnLayout(classParent, classChildren, colOneTitle, colTwoTitle, formBlueprint) {
+        // The formBlueprint parameter is now included
+        const colOneChildren = [
+            {
+                tag: 'h2',
+                content: colOneTitle
+            },
+        ];
+
+        // If a form blueprint is provided, add it to the children array.
+        if (formBlueprint) {
+            colOneChildren.push(formBlueprint);
+        }
+        
+        // Add the project list container
+        colOneChildren.push({
+            tag: 'div',
+            id: 'project-list-container'
+        });
+
         return {
             tag: 'div',
             classes: classParent,
@@ -124,16 +143,7 @@ export class basicElementStructures {
                 {
                     tag: 'div',
                     classes: [classChildren, 'colOne'],
-                    children: [
-                        {
-                            tag: 'h2',
-                            content: colOneTitle
-                        },
-                        {
-                            tag: 'p',
-                            conent: colOneContent
-                        }
-                    ]
+                    children: colOneChildren
                 },
                 {
                     tag: 'div',
@@ -142,15 +152,11 @@ export class basicElementStructures {
                         {
                             tag: 'h2',
                             content: colTwoTitle
-                        },
-                        {
-                            tag: 'p',
-                            content: colTwoContent
                         }
                     ]
                 }
             ]
-        }
+        };
     }
 
     static footer(content) {
@@ -168,23 +174,29 @@ export class basicElementStructures {
 
 export function customizedHTML() {
     let content = '';
-    
-    /* Basic Header */ 
+
+    /* Basic Header */
     const header = basicElementStructures.siteHeader('To-Do List App');
     new basicElementStructures(header, 'body');
 
     /* Customized Content */
     const colOneTitle = 'Project Listing';
     const colTwoTitle = 'Project Tasks';
-    let colOneContent;
-    let colTwoContent; // 3 column layout
-    // Create 2 column layout
-    const twoColumns = basicElementStructures.twoColumnLayout(['gridParent'], ['gridChild'], colOneTitle, colTwoTitle, colOneContent, /*colTwoContent*/);
+
+    // Create the form blueprint first.
+    const projectFormBlueprint = basicElementStructures.form('New Project Name: ', 'Submit Project', 'projectTitle');
+
+    // Create 2 column layout, passing the form blueprint as an argument.
+    const twoColumns = basicElementStructures.twoColumnLayout(
+        ['gridParent'],
+        ['gridChild'],
+        colOneTitle,
+        colTwoTitle,
+        projectFormBlueprint // This is the new parameter
+    );
     new basicElementStructures(twoColumns, 'body');
-    // Create form to put in first column made above
-    colOneContent = basicElementStructures.form('New Project Name: ', 'Submit Project', 'projectTitle');
-    new basicElementStructures(colOneContent, '.colOne');
-    // Calls project and task user interaction script to run 
+
+    // Calls project and task user interaction script to run
     projectListCRUD();
     taskListCRUD();
 
