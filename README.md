@@ -117,3 +117,7 @@ class MyClass {
 }
 ```
 MyClass.div() - Calling the static factory method
+
+# Next Tasks
+- Add edit and delete functionality to each of the projects
+- Get tasks displayed and working with CRUD functionality
