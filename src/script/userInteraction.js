@@ -2,8 +2,8 @@ import { Projects } from "./logic";
 import { basicElementStructures } from "./structure";
 
 export function projectListCRUD() {
-    const form = document.querySelector('form');
-    form.addEventListener('click', (event) => {
+    const button = document.querySelector('button');
+    button.addEventListener('click', (event) => {
         event.preventDefault(); // Prevents a full reload 
 
         // Form Values

@@ -1,7 +1,31 @@
 // Object Constructors
+export let currentProjects = [];
+
 export function Projects(title) {
     this.title = title;
     this.todos = [];
+
+    // Add new objects to an array of objects
+    currentProjects.push(
+        {
+            title: this.title,
+            todos: this.todo
+        }
+    )
+
+    // Store the current project to the end of the localStorage string as JSON 
+    const projects = localStorage.getItem('projects');
+
+    if (projects) {
+        JSON.parse(projects);
+        // Push each project object into there own object from the Projects class
+    } else {
+        // Start a new array of objects 
+
+
+        // Save this array of objects in a JSON string in localStorage
+    }
+
 }
 
 // Grab all Projects object to store in a JSON string inside a localStorage JS string
